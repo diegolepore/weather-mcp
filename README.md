@@ -105,7 +105,13 @@ You won't see any output in the terminal — the server is waiting silently for 
 
 The [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector) is a browser-based tool that lets you call your server's tools interactively before connecting it to Claude or Cursor. It's the fastest way to check that everything works.
 
+> **Important:** Always run the build script before launching the Inspector (or any client). The Inspector runs the compiled JavaScript in `build/`, not the TypeScript source — so if you skip the build, you'll be testing a stale or missing version of the server.
+
 ```bash
+# 1. Compile the server
+npm run build
+
+# 2. Launch the Inspector
 npx @modelcontextprotocol/inspector node /absolute/path/to/weather/build/index.js
 ```
 
@@ -116,7 +122,7 @@ The Inspector will open in your browser. You should see two tools listed:
 - `get_current_weather`
 - `get_weather_forecast`
 
-Click either one, type a city name in the `city` field, and hit **Run tool** to verify the response.
+Click either one, type a city name in the `city` field, and hit **Run tool**. The response you see in the Inspector is exactly the text the AI client will receive and use to compose its answer — so this is a reliable preview of what Claude or Cursor will work with.
 
 ---
 
