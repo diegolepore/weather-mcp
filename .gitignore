@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+*.tsbuildinfo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# IDE and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Testing and coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Cache and temp
+.cache/
+.temp/
+.tmp/
+*.tmp
+
+# Optional npm cache
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Lock files (uncomment if you want to ignore; usually you commit them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
